@@ -9,7 +9,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-        distribution: 'temurin'
+        distribution: 'adopt'
         cache: maven
     - name: Build with Maven cloud
       run: mvn -B verify sonar:sonar -Dsonar.projectKey=kaixuan-githubsonar1 -Dsonar.organization=kaixuan-12345678 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
